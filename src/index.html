@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="style.css">
+     <!-- Tailwind css CDN -->
+     <script src="https://cdn.tailwindcss.com"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+     
+     
+     <!-- Font Awesome  -->
+     <script src="https://kit.fontawesome.com/352d03c929.js" crossorigin="anonymous"></script>
+     <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
+     <title>1 Stop</title>
+</head>
+<body>
+     
+     <!-- Navbar -->
+     <nav class="py-2 px-0 z-10 lg:px-24 shadow-md flex flex-col sm:flex-row justify-between fixed bg-white w-screen top-0 left-0 items-center">
+          <a href="index.html"><img src="../assets/logo.png" alt="logo" class=" w-40 sm:32 lg:w-50 "></a>
+          <div class="navitems">
+               <ul class="flex text-lg  lg:gap-12 gap-5 flex-wrap justify-center  font-semibold ">
+                    <li class="hover:text-orange-400 transition ease-in-out"><a href="about.html">About Us</a></li>
+                    <li class="hover:text-orange-400 transition ease-in-out"><a href="about.html">Service</a></li>
+                    <li class="hover:text-orange-400 transition ease-in-out"><a href="about.html">Blog</a></li>
+                    <li class="hover:text-orange-400 transition ease-in-out"><a href="about.html">Contact Us</a></li>
+                    <li class="hover:text-orange-400 transition ease-in-out"><a href="about.html">Login / Register</a></li>
+               </ul>
+          </div>
+     </nav>
+
+     <main>
+
+          <!-- Landing Page -->
+
+          <section class="landing flex  justify-center items-center">
+               <div class=" backdrop-blur-md p-5 rounded  sm:w-2/4 text-center">
+                    <div class="content  line leading-9 flex justify-around items-center flex-col gap-5 ">
+                         <h1 class="text-white lg:text-5xl text-3xl font-bold">Education is a form of <span class="text-orange-500">Art</span> &
+                              <span class="text-orange-500">Creativity</span>
+                         </h1>
+                         <p class="text-white text-lg font-semibold sm:text-md text-center">Lorem, ipsum dolor sit amet consectetur adipisicing
+                              elit.
+                              Cum incidunt tempora facilis asperiores quo consectetur nam. Deserunt odio laboriosam neque maxime
+                              maiores
+                              magni dolore voluptatum modi veniam facere, sed ad.</p>
+                    </div>
+                    <div>
+                         <button
+                              class="btn border-2 border-orange-500 transition ease-in-out py-2 px-8 my-4 rounded text-white hover:bg-orange-500  font-semibold ">Book
+                              Now</button>
+                    </div>
+               </div>
+          </section>
+
+
+          <!-- Products cards -->
+
+          <section class="products  flex flex-col gap-12 justify-center items-center">
+               <h1 class="text-5xl my-5 uppercase text-center font-bold">our products</h1>
+               <div class="cardsContainer flex flex-row justify-center items-center gap-5 flex-wrap">
+
+               </div>
+               <button class="bg-orange-400 text-white font-sembold text-md py-2 px-5 rounded hover:bg-white hover:text-orange-400 transition ease-in hover:border-2 border-orange-400">Explore All</button>
+          </section>
+
+
+          <!-- Key Highlights -->
+
+          <section class="keyHights  w-full px-16 md:px-32 py-12">
+               <h1 class="text-center font-bold mb-5 text-3xl md:text-4xl lg:text-5xl  ">Our Key Highlights</h1>
+               <div class="keyContent w-full flex flex-col md:flex-row  justify-around items-center">
+                    <ul class="md:w-2/4 w-full flex flex-col gap-3">
+                         <li class="capitalize border-l-4 py-2 px-3 shadow-md  border-orange-400">Lorem ipsum dolor sit amet.</li>
+                         <li class="capitalize border-l-4 py-2 px-3 shadow-md  border-orange-400">Lorem ipsum dolor sit amet.</li>
+                         <li class="capitalize border-l-4 py-2 px-3 shadow-md  border-orange-400">Lorem ipsum dolor sit amet.</li>
+                         <li class="capitalize border-l-4 py-2 px-3 shadow-md  border-orange-400">Lorem ipsum dolor sit amet.</li>
+                         <li class="capitalize border-l-4 py-2 px-3 shadow-md  border-orange-400">Lorem ipsum dolor sit amet.</li>
+                         <li class="capitalize border-l-4 py-2 px-3 shadow-md  border-orange-400">Lorem ipsum dolor sit amet.</li>
+                    </ul>
+                    <div class=" w-full md:w-2/4">
+                         <img src="../assets/shopping.svg" alt="" class="w-full ">
+                    </div>
+               </div>
+          </section>
+
+
+          <!-- Testimonal Carousel -->
+
+          <section>
+
+               <h1 class="text-center font-bold mb-5 text-3xl md:text-4xl lg:text-5xl  ">Our Clients</h1>
+               <div id="carouselExampleCaptions" class="carousel slide relative w-3/4 mx-auto" data-bs-ride="carousel">
+                    <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                              aria-current="true" aria-label="Slide 1"></button>
+                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                              aria-label="Slide 2"></button>
+                         <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                              aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner relative w-full overflow-hidden">
+                         <div class="carousel-item active relative float-left w-full">
+                              <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg" class="block w-full rounded" alt="..." />
+                              <div class="carousel-caption hidden md:block absolute text-center">
+                                   <h5 class="text-xl">First slide label</h5>
+                                   <p>Some representative placeholder content for the first slide.</p>
+                              </div>
+                         </div>
+                         <div class="carousel-item relative float-left w-full rounded">
+                              <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg" class="block w-full rounded" alt="..." />
+                              <div class="carousel-caption hidden md:block absolute text-center">
+                                   <h5 class="text-xl">Second slide label</h5>
+                                   <p>Some representative placeholder content for the second slide.</p>
+                              </div>
+                         </div>
+                         <div class="carousel-item relative float-left w-full rounded">
+                              <img src="https://mdbootstrap.com/img/Photos/Slides/img%20(23).jpg" class="block w-full rounded" alt="..." />
+                              <div class="carousel-caption hidden md:block absolute text-center">
+                                   <h5 class="text-xl">Third slide label</h5>
+                                   <p>Some representative placeholder content for the third slide.</p>
+                              </div>
+                         </div>
+                    </div>
+                    <button
+                         class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0"
+                         type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                         <span class="carousel-control-prev-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                         <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button
+                         class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0"
+                         type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                         <span class="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
+                         <span class="visually-hidden">Next</span>
+                    </button>
+               </div>
+          </section>
+
+
+          <!-- Footer -->
+
+          <footer >
+               <div class="px-16 py-12 lg:px-32 my-5 flex flex-col lg:flex-row justify-between items-center">
+                    <div class="img">
+                         <a href="index.html"><img src="../assets/logo.png" alt="logo" class=" w-40 sm:32 lg:w-50 "></a>
+                    </div>
+                    <div class="flex gap-12 lg:gap-24">
+                         <div>
+                              <h3 class="md:text-2xl uppercase">Pages</h3>
+                              <ul class="flex sm:text-sm md:text-md text-gray-500 justify-center  flex-col font-normal ">
+                                   <li class="hover:text-orange-400 transition ease-in-out"><a href="about.html">About Us</a></li>
+                                   <li class="hover:text-orange-400 transition ease-in-out"><a href="about.html">Service</a></li>
+                                   <li class="hover:text-orange-400 transition ease-in-out"><a href="about.html">Blog</a></li>
+                                   <li class="hover:text-orange-400 transition ease-in-out"><a href="about.html">Contact Us</a></li>
+                              </ul>
+                         </div>
+                         <div>
+                              <h3 class="md:text-2xl uppercase">Documents</h3>
+                              <ul class="flex sm:text-sm text-md text-gray-500 justify-center  flex-col font-normal ">
+                                   <li class="hover:text-orange-400 transition ease-in-out"><a href="about.html">Privacy Policy</a></li>
+                                   <li class="hover:text-orange-400 transition ease-in-out"><a href="about.html">Terms of Use</a></li>
+                                   <li class="hover:text-orange-400 transition ease-in-out"><a href="about.html">Refund policy</a></li>
+                              </ul>
+                         </div>
+                         <div class="flex flex-col  gap-6">
+                              <h3 class="md:text-2xl uppercase">Follow Us</h3>
+                              <ul class="flex md:text-3xl text-sm text-gray-500 justify-between flex-col md:flex-row flex-wrap gap-1  md:gap-6 font-normal ">
+                                   <li class="hover:text-blue-600 transition ease-in-out"><a href="about.html"><i class="fa-brands fa-facebook-f"></i></a></li>
+                                   <li class="hover:text-blue-400 transition ease-in-out"><a href="about.html"><i class="fa-brands fa-twitter"></i></a></li>
+                                   <li class="hover:text-blue-400 transition ease-in-out"><a href="about.html"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                                   <li class="hover:text-red-300 transition ease-in-out"><a href="about.html"><i class="fa-brands fa-square-instagram"></i></a></li>
+                              </ul>
+                         </div>
+                         <div>
+                              <h3 class="md:text-2xl uppercase">Contact Us</h3>
+                              <ul class="flex text-md text-gray-500 justify-center  flex-col font-normal ">
+                                   <li class="hover:text-orange-400 transition ease-in-out"><a href="about.html">Facebook</a></li>
+                                   <li class="hover:text-orange-400 transition ease-in-out"><a href="about.html">Twitter</a></li>
+                                   <li class="hover:text-orange-400 transition ease-in-out"><a href="about.html">Instagram</a></li>
+                                   <li class="hover:text-orange-400 transition ease-in-out"><a href="about.html">Contact Us</a></li>
+                              </ul>
+                         </div>
+                    </div>
+               </div>
+               <div class="copy text-center border-2 py-3 bg-gray-200">
+                    <h2 class="text-lg">Copy Rights <span class="text-orange-400">©</span> 2021 1Stop. All rights reserved</h2>
+               </div>
+          </footer>
+
+
+     </main>
+
+     <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+     <script src="./script.js"></script>
+</body>
+</html>
