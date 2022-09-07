@@ -6,7 +6,7 @@
 .landing{
      margin-top: 4.5em;
      height: 85vh;
-     background-image: url(../assets/landing-background.jpg);
+     background-image: url(./assets/landing-background.jpg);
      background-repeat: no-repeat;
      background-position: center;
      background-size: cover;
