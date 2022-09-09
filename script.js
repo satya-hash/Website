@@ -24,10 +24,39 @@ async function getProducts(){
                     </div>`;
      }
      let { products } = await getProducts();
-     console.log(products);
      items = products.map(product => showProduct(product) )
      cardsContainer.innerHTML = items.join(' ');
 })()
 
 
+let name = document.querySelector('#name').value
+let email = document.querySelector('#email').value
+let txt = document.querySelector('#txt').value
 
+console.log(name,email,txt);
+
+const postData =  () => {
+     fetch('https://jsonplaceholder.typicode.com/posts',{
+          method: 'POST',
+          body: JSON.stringify({
+               title: 'example',
+               body: 'this is the body',
+               userId:1,
+               name: `${name}`,
+               email: `${email}`,
+               comment:`${txt}`
+          }),
+          headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+          },
+     }).then(res=>res.json()).then(data=>console.log(data))
+}
+
+
+let submitBtn = document.querySelector('#submitBtn');
+
+submitBtn.addEventListener('submit', (e) => {
+     e.preventDefault();
+     console.log('event listener working');
+     postData();
+})
