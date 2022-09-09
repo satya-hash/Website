@@ -17,7 +17,7 @@
      <script src="https://kit.fontawesome.com/352d03c929.js" crossorigin="anonymous"></script>
      <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
      <link rel="stylesheet" href="../style.css">
-     <title>E-About Us</title>
+     <title>E-Login</title>
 </head>
 
 <body>
@@ -45,28 +45,59 @@
           </nav>
 
 
-          <!-- About us -->
+          <!-- Login Page  -->
 
-          <section class="mt-32 p-2 lg:px-24">
-               <div class="my-3 mx-auto text-center w-3/4">
-                    <h1 class=" lg:text-5xl text-3xl  font-bold my-5 ">About Us</h1>
-                    <p class="text-lg">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, quibusdam
-                         provident? Eligendi id at aliquid. Quas asperiores mollitia molestiae unde rerum nostrum nulla,
-                         impedit facere sit totam, ad eum ipsam!
-                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, quibusdam provident?
-                         Eligendi id at aliquid. Quas
-                         asperiores mollitia molestiae unde rerum nostrum nulla, impedit facere sit totam, ad eum ipsam!
-                    </p>
+          <section class="mt-32 w-full p-2 lg:px-24">
+               <div class="flex gap-4 flex-col md:flex-row md:gap-12 justify-around items-center">
+                    <div>
+                         <img src="../assets/login.svg" alt="login">
+                    </div>
+                    <div class=" login w-full max-w-sm">
+                         <form class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                                             <div class="mb-4">
+                                                  <label class="block text-gray-700 text-sm font-bold mb-2" for="username">
+                                                       Email
+                                                  </label>
+                                                  <input
+                                                       class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                                       id="username" type="email" placeholder="Email">
+                                             </div>
+                                             <div class="mb-6">
+                                                  <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+                                                       Password
+                                                  </label>
+                                                  <input
+                                                       class="shadow appearance-none border border-red-500 rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                                                       id="password" type="password" placeholder="Password">
+                                                  <p class="text-red-500 text-xs italic">Please choose a password.</p>
+                                             </div>
+                                             <div class="flex mb-2 items-center justify-between">
+                                                  <button
+                                                       class="bg-orange-400 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                                       type="button">
+                                                       Login
+                                                  </button>
+                                                  <a class="inline-block align-baseline font-bold text-sm text-orange-500 hover:text-orange-800" href="#">
+                                                       Forgot Password?
+                                                  </a>
+                                             </div>
+                                             <hr>
+                                             <div class="text-center">
+                                                  <h5 class="my-3"> Login with </h5>
+                                                  <ul class="flex justify-center items-center gap-6">
+                                                       <li class="text-2xl hover:text-blue-300"><a href=""><i class="fa-brands fa-facebook-f"></i></a></li>
+                                                       <li class="text-2xl hover:text-gray-400"><a href=""><i class="fa-brands fa-github"></i></a></li>
+                                                       <li class="text-2xl hover:text-slate-500"><a href=""><i class="fa-brands fa-google"></i></a></li>
+                                                  </ul>
+                                             </div>
+                                        </form>
+                                   
+                                   </div>
+
+                   
                </div>
-               <div class="my-3 mx-auto text-center w-3/4">
-                    <h1 class=" lg:text-5xl text-3xl font-bold my-5">Our Mission</h1>
-                    <p class="text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti excepturi eos
-                         omnis facilis voluptatem esse consequuntur laborum. Voluptas nam enim officia ullam maiores
-                         velit sunt excepturi vero! Itaque, consectetur repellendus.
-                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptates, quibusdam provident?
-                         Eligendi id at aliquid. Quas
-                         asperiores mollitia molestiae unde rerum nostrum nulla, impedit facere sit totam, ad eum ipsam!
-                    </p>
+               <div>
+                    
                </div>
           </section>
 
