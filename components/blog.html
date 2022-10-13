@@ -5,6 +5,9 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="">
+     <meta name="keywords" content="online furniture, sofas , beds , sofaset">
+
      <!-- Tailwind css CDN -->
      <script src="https://cdn.tailwindcss.com"></script>
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
@@ -17,7 +20,7 @@
      <script src="https://kit.fontawesome.com/352d03c929.js" crossorigin="anonymous"></script>
      <link rel="shortcut icon" href="../assets/favicon.ico" type="image/x-icon">
      <link rel="stylesheet" href="../style.css">
-     <title>E-Blog</title>
+     <title>E-Review</title>
 </head>
 
 <body>
@@ -33,9 +36,9 @@
                     <ul class="flex text-lg  lg:gap-12 gap-5 flex-wrap justify-center  font-semibold ">
                          <li class="hover:text-orange-400 transition ease-in-out"><a href="./aboutUs.html">About Us</a>
                          </li>
-                         <li class="hover:text-orange-400 transition ease-in-out"><a href="./Products.html">Service</a>
+                         <li class="hover:text-orange-400 transition ease-in-out"><a href="./Products.html">Products</a>
                          </li>
-                         <li class="hover:text-orange-400 transition ease-in-out"><a href="./blog.html">Blog</a></li>
+                         <li class="hover:text-orange-400 transition ease-in-out"><a href="./blog.html">Review</a></li>
                          <li class="hover:text-orange-400 transition ease-in-out"><a href="./contactUs.html">Contact
                                    Us</a></li>
                          <li class="hover:text-orange-400 transition ease-in-out"><a href="./login.html">Login /
@@ -47,9 +50,10 @@
 
           <!-- Blog  -->
 
-          <section class="mt-20 p-12 lg:px-24 flex gap-4 flex-col md:flex-row bg-green-100">
-               <div class="w-full md:w-1/2 "> 
-                    <form class="flex flex-col gap-4 p-6 w-full  shadow-md">
+          <section class="mt-20 p-12 lg:px-24 flex gap-4 flex-col justify-center items-center md:flex-row">
+               <div class="w-full "> 
+                    <form class="flex flex-col gap-4 p-6 w-full"
+                   >
                          <div class="text-md px-5">
                               <label for="name" class="text-lg">Username :</label><br>
                               <input 
@@ -87,8 +91,8 @@
                          </div>
                     </form>
                </div>
-               <div>
-                    <img src="../assets/review.svg" alt="review">
+               <div class="w-full" >
+                    <img class="w-full"  src="../assets/review.svg" alt="review">
                </div>
           </section>
 
@@ -109,9 +113,9 @@
                                    <li class="hover:text-orange-400 transition ease-in-out"><a
                                              href="./aboutUs.html">About Us</a></li>
                                    <li class="hover:text-orange-400 transition ease-in-out"><a
-                                             href="./Products.html">Service</a></li>
+                                             href="./Products.html">Products</a></li>
                                    <li class="hover:text-orange-400 transition ease-in-out"><a
-                                             href="./blog.html">Blog</a></li>
+                                             href="./blog.html">Review</a></li>
                                    <li class="hover:text-orange-400 transition ease-in-out"><a
                                              href="./contactUs.html">Contact Us</a></li>
                               </ul>
@@ -158,8 +162,8 @@
                     </div>
                </div>
                <div class="copy text-center border-2 py-3 shadow-md bg-gray-200">
-                    <h2 class="text-lg">Copy Rights <span class="text-orange-400">©</span> 2021 1Stop. All rights
-                         reserved</h2>
+                    <h2 class="text-lg">Copy Rights <span class="text-orange-400">©</span> <script>document.write(new Date().getFullYear()) </script> 1Stop. All rights reserved</h2>
+
                </div>
           </footer>
 
@@ -168,13 +172,13 @@
 
 
      <script >
-               const postData = () => {
+               const postData = (name,email,txt) => {
                     fetch('https://jsonplaceholder.typicode.com/posts', {
                          method: 'POST',
                          body: JSON.stringify({
                               title: 'example',
                               body: 'this is the body',
-                              userId:225,
+                              userId:1,
                               name: `${name}`,
                               email: `${email}`,
                               comment: `${txt}`
@@ -191,13 +195,11 @@
                let submitBtn = document.querySelector('#submitBtn');
 
                submitBtn.addEventListener('click', (e) => {
+                    e.preventDefault();
                     let name = document.querySelector('#name').value
                     let email = document.querySelector('#email').value
                     let txt = document.querySelector('#txt').value
-                    e.preventDefault();
-                    console.log(name, email, txt);
-
-                    postData();
+                    postData(name,email,txt);
                     alert('Your data is uploaded');
                })
      </script>

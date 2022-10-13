@@ -4,6 +4,9 @@
      <meta charset="UTF-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="">
+     <meta name="keywords" content="online furniture, sofas , beds , sofaset">
+
      <title>E-Products</title>
      <!-- Tailwind css CDN -->
      <script src="https://cdn.tailwindcss.com"></script>
@@ -31,9 +34,9 @@
                                         Us</a>
                               </li>
                               <li class="hover:text-orange-400 transition ease-in-out"><a
-                                        href="./Products.html">Service</a>
+                                        href="./Products.html">Products</a>
                               </li>
-                              <li class="hover:text-orange-400 transition ease-in-out"><a href="./blog.html">Blog</a>
+                              <li class="hover:text-orange-400 transition ease-in-out"><a href="./blog.html">Review</a>
                               </li>
                               <li class="hover:text-orange-400 transition ease-in-out"><a
                                         href="./contactUs.html">Contact
@@ -49,10 +52,13 @@
           
                <section class="mt-32 p-2 mx-auto w-full">
                     <h1 class=" lg:text-5xl text-3xl text-center font-bold my-5 ">Products</h1>
+                    <div class="categories flex flex-wrap justify-center gap-4 capitalize my-5"></div>
                     <div class="products flex flex-wrap justify-center w-full  gap-6">
 
                     </div>
                </section>
+
+               
           
                <!-- Footer -->
           
@@ -69,9 +75,9 @@
                                         <li class="hover:text-orange-400 transition ease-in-out"><a
                                                   href="./aboutUs.html">About Us</a></li>
                                         <li class="hover:text-orange-400 transition ease-in-out"><a
-                                                  href="./Products.html">Service</a></li>
+                                                  href="./Products.html">Products</a></li>
                                         <li class="hover:text-orange-400 transition ease-in-out"><a
-                                                  href="./blog.html">Blog</a></li>
+                                                  href="./blog.html">Review</a></li>
                                         <li class="hover:text-orange-400 transition ease-in-out"><a
                                                   href="./contactUs.html">Contact Us</a></li>
                                    </ul>
@@ -115,8 +121,7 @@
                          </div>
                     </div>
                     <div class="copy text-center border-2 py-3 shadow-md bg-gray-200">
-                         <h2 class="text-lg">Copy Rights <span class="text-orange-400">©</span> 2021 1Stop. All rights reserved
-                         </h2>
+                         <h2 class="text-lg">Copy Rights <span class="text-orange-400">©</span> <script>document.write(new Date().getFullYear()) </script> 1Stop. All rights reserved</h2>
                     </div>
                </footer>
           
@@ -125,7 +130,8 @@
 
 
      <script >
-          let productsContainer = document.querySelector('.products')
+          let productsContainer = document.querySelector('.products');
+          let categoriesContainer = document.querySelector('.categories');
 
                async function getProducts() {
                     let res = await fetch('https://dummyjson.com/products')
@@ -133,26 +139,67 @@
                     return await data;
                }
 
+               async function getCategories(){
+                    let res = await fetch('https://fakestoreapi.com/products/categories');
+                    return await res.json();
+               }
+
+               (async ()=>{
+                    let categories;
+                    let cat = await getCategories();
+                    categories = cat.map((category=>(`<button class="category  capitalize px-5 py-2 rounded border-orange-400 border-2 hover:bg-orange-500 hover:text-white transition ease-in-out"> ${category}</button>`)));
+                    categoriesContainer.innerHTML = categories.join(' ');
+                    let category = document.querySelectorAll('.category');
+                    for(let i=0;i<category.length;i++){
+                         category[i].addEventListener('click',()=>{
+                              showCat(cat[i]);
+                         })
+                    }
+               })();
+
+               function showCat(category){
+                    (async ()=>{
+                         // console.log(category);
+                         let url = new URL(category,'https://fakestoreapi.com/products/categories/');
+                         console.log(url);
+                         // let res = await fetch(`https://fakestoreapi.com/products/categories/${category}`);
+                         // console.log(res.json());
+                    })()
+               }
+
+
+
                (async () => {
                     let allProducts;
                     function showProduct(product) {
                          let { title, id, images, description,price } = product;
-                         return `<div class="product max-w-md lg:w-1/3 h-100 px-5 py-2 rounded overflow-hidden shadow-md" id=${id}>
-                                        <div class=' h-1/2 flex justify-center allProducts-center overflow-hidden'>
+                         
+                         return `<div class="product max-w-md lg:w-1/3 h-96 flex flex-col justify-between  px-5 py-2 rounded overflow-hidden shadow-md" id=${id}>
+                                        <div class=' flex justify-center allProducts-center overflow-hidden'>
                                              <img class="w-1/2 h-full text-center hover:scale-125 transition ease-in-out " src=${images[0]} alt=${title}>
                                         </div>
                                         <div class="px-6 py-4">
-                                             <div class="font-semibold text-xl mb-2">${title}</div>
-                                             <div class="font-bold text-xl mb-2">$${price}</div>
+                                             <div class="font-semibold text-xl text-gray-700 mb-2">${title}</div>
+                                             <div class="font-bold text-xl  mb-2">$${price}</div>
                                              <p class="text-gray-700 text-base">
                                                   ${description}
                                              </p>
                                         </div>
+                                        <button 
+                                        class="btn bg-orange-400  px-5 py-2 rounded text-white hover:bg-orange-500 float-right"> Buy Item</button>
+
                                    </div>`;
                     }
                     let { products } = await getProducts();
                     allProducts = products.map(product => showProduct(product))
                     productsContainer.innerHTML = allProducts.join(' ');
+                    let btn = document.querySelectorAll('.btn');
+                         for(let i=0;i<btn.length;i++){
+                              btn[i].addEventListener('click',()=>{
+                                   alert(`The ${products[i].title} bought Successfully`);
+                              })
+                         }
+
                })()
 
 
